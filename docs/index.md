@@ -1,4 +1,4 @@
-# Welcome to Github Pages
+# Welcome to test-mkdocs
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
