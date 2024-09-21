@@ -1,76 +1,274 @@
-<!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="None">
-        
-        
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <title>My Docs</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/fontawesome.min.css" rel="stylesheet">
-        <link href="css/brands.min.css" rel="stylesheet">
-        <link href="css/solid.min.css" rel="stylesheet">
-        <link href="css/v4-font-face.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
-        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
-        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-        <script>hljs.highlightAll();</script> 
-    </head>
 
-    <body class="homepage">
-        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href=".">My Docs</a>
+<!DOCTYPE html lang="ja">
 
-                <!-- Expanded navigation -->
-                <div id="navbar-collapse" class="navbar-collapse collapse">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-                    <ul class="nav navbar-nav ms-md-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
-                            </a>
-                        </li>
-                    </ul>
+  
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#111111" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#eeeeee" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  
+
+  
+    <meta http-equiv="content-language" content="ja">
+  
+  
+
+  
+  <title>Welcome | Tech Note</title>
+  
+
+  
+
+  <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/default.min.css">
+  <link rel="stylesheet" href="css/vs.min.css">
+  <link rel="stylesheet" href="css/theme.css">
+  
+  
+  
+  <script async>var base_url = '.';</script>
+  <script src="js/jquery-3.6.1.slim.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script async src="js/highlight.min.js"></script>
+
+  
+  
+</head>
+<body>
+  
+  
+    
+    <header>
+      <nav class="navbar navbar-expand-sm navbar-toggleable-sm  border-bottom box-shadow mb-3 ">
+        <div class="container">
+            <a class="navbar-brand text-body" asp-area="" href="/">
+              
+              
+                Tech Note
+              
+            </a>
+            <div class="print-hide">
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <div class="d-none d-md-flex input-group mb-3">
+                
+                    <input class="form-control" type="search" id="searchbox" accesskey="/" placeholder="Tech Noteで検索" aria-label="検索" aria-describedby="search-btn"/>
+                    <button class="btn btn-outline-secondary" type="button" id="search-btn" onclick="search(false);">
+                        <i class="bi bi-search"></i>
+                    </button>
+                    
                 </div>
             </div>
+            </div>
         </div>
-
-        <div class="container">
-            <div class="row">
-                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
-            <span class="fa fa-angle-down"></span>
-        </button>
-    </div>
-
+    </nav>
+    <nav class="navbar border-bottom box-shadow mb-3 d-md-none print-hide">
+      <div class="container">
+          <div class="navbar-collapse d-flex">
+            <p>
+              <div class="d-flex input-group mb-3">
+                
+                <button class="btn btn-outline-secondary" onclick="toggle_nav(this);" type="button" data-bs-toggle="collapse" data-bs-target="#nav" title="ナビゲーションを表示"><i class="bi bi-book"></i></button>
+                
+                
+                <input class="form-control" type="search" id="searchbox_mobile" accesskey="/" placeholder="Tech Noteで検索" aria-label="検索">
+                <button class="btn btn-outline-secondary" type="button" onclick="search(true);"><i class="bi bi-search"></i></button>
+                
+                
+                
+                <button class="btn btn-outline-secondary" onclick="toggle_toc(this);" type="button" data-bs-toggle="collapse" data-bs-target="#tol"><i class="bi bi-list-ul"></i></button>
+                
+                
+            </div>
+            </p>
+          </div>
+      </div>
+    </nav>
+  </header>
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
-        <ul class="nav flex-column">
+  
+  
+  
+  <div class="container">
+    <main role="main" class="pb-3">
+      <div class="row">
+        
+        
+    
+    <div class="col-12 col-md-2 print-hide">
+      <div class="collapse d-md-block text-nowrap" id="nav"  style="overflow-x:scroll;">
+        <ul class="list-group list-group-flush">
+        
+        
+        <li class="list-group-item"><a class="text-decoration-none  text-body" href=".">Welcome</a></li>
+        
+        
+        
+        <li class="list-group-item">
+          <a class="nav_cop  text-muted" aria-expanded="false" data-bs-toggle="collapse" role="button" >Network</a>
+          <ul class="collapse list-group list-group-flush  ">
             
-            <li class="nav-item" data-bs-level="1"><a href="#welcome-to-test-mkdocs" class="nav-link">Welcome to test-mkdocs</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#commands" class="nav-link">Commands</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#project-layout" class="nav-link">Project layout</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
-        </ul>
-    </div>
-</div></div>
-                    <div class="col-md-9" role="main">
 
-<h1 id="welcome-to-test-mkdocs">Welcome to test-mkdocs</h1>
+        
+        
+            <li class="list-group-item"><a class="nav_cop  text-muted" aria-expanded="false" data-bs-toggle="collapse" role="button" >MAC</a>
+              <ul class="collapse list-group list-group-flush ">
+                
+
+        
+        
+            <li class="list-group-item"><a class="text-decoration-none  text-muted" href="Network/MAC/MacAddress/">MAC Address</a></li>
+            
+        
+        
+              </ul>
+            </li>
+        
+            
+            
+        
+        
+          </ul>
+        </li>
+        
+        
+      </ul>
+      </div>
+    </div>
+    
+       
+    
+    
+    
+    <div class="col-12 col-md-2 order-md-3 print-hide">
+      <div class="collapse d-md-block text-nowrap" id="tol"  style="overflow-x:scroll;">
+        <span>目次</span>
+         <hr/>
+        <ul class="list-group list-group-flush">
+        
+        <li class="list-group-item"><a class="text-decoration-none text-muted" href="#welcome" >Welcome</a>
+          
+            <ul class="list-group list-group-flush">
+            
+              
+    <li class="list-group-item"><a class="text-decoration-none text-muted" href="#commands" >Commands</a>
+    
+    </li>
+
+            
+              
+    <li class="list-group-item"><a class="text-decoration-none text-muted" href="#project-layout" >Project layout</a>
+    
+    </li>
+
+            
+      </ul>
+          
+          </li>
+        
+        <li class="list-group-item"><a class="text-decoration-none text-muted" href="#customize-mkdocs-theme" >Customize MKDocs Theme</a>
+          
+            <ul class="list-group list-group-flush">
+            
+              
+    <li class="list-group-item"><a class="text-decoration-none text-muted" href="#install-theme" >Install theme</a>
+    
+    </li>
+
+            
+              
+    <li class="list-group-item"><a class="text-decoration-none text-muted" href="#modify-mkdocsyml" >Modify mkdocs.yml</a>
+    
+    </li>
+
+            
+              
+    <li class="list-group-item"><a class="text-decoration-none text-muted" href="#example-mermaid" >Example mermaid</a>
+    
+    </li>
+
+            
+      </ul>
+          
+          </li>
+        
+      </ul>
+      </div>
+    </div>
+    
+    
+    <div class="col-12 col-md-8 print-main">
+      
+      <h1>Welcome</h1>
+      
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">Tech Note</li>
+        
+        
+        <li class="breadcrumb-item active" aria-current="page">Welcome</li>
+        
+        
+        
+        
+        
+      </ol>
+    </nav>
+    
+    
+    <div class="d-flex justify-content-between">
+      
+      <div>
+        
+        <a class="btn text-muted print-hide"><i class="bi bi-chevron-left"></i></a>
+        
+        
+        <a class="btn text-primary print-hide" href="Network/MAC/MacAddress/" title="MAC Address"><i class="bi bi-chevron-right"></i></a>
+        
+      </div>
+      
+      
+      <div>
+        <div>
+          
+          
+          <small><span class='git-page-authors git-authors'><a href='mailto:mike.oscar.5201@gmail.com'>oscar5201m</a></span></small>
+          <span>|</span>
+          
+          
+          
+          
+          
+          <button class="btn print-block" title="このページを印刷" onclick="window.print();"><i class="bi bi-printer"></i></button>
+          <button class="btn print-visible d-none" onclick="print_normal();" title="新しいタブで開く"><i class="bi bi-arrow-up-right-square"></i></button>
+          
+          
+          <a class="btn disabled print-hide"><i class="bi bi-pencil"></i></a>
+          
+          
+          <span class="dropdown print-hide">
+            <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-share"></i></button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><button class="btn dropdown-item" onclick="share_to_twitter('Welcome | Tech Note','');"><i class="bi bi-twitter"></i>&nbsp;Twitter</button></li>
+              <li><button class="btn dropdown-item" onclick="share_to_facebook();"><i class="bi bi-facebook"></i>&nbsp;Facebook</button></li>
+              <li><button class="btn dropdown-item" onclick="share_to_line();"><i class="bi bi-line"></i>&nbsp;LINE</button></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><button class="btn dropdown-item" onclick="print_view();"><i class="bi bi-file-earmark-text"></i>&nbsp;埋込モードで表示</button></li>
+              <li><button class="btn dropdown-item" id="page-url-copy-btn"><i class="bi bi-clipboard"></i>&nbsp;URLをコピー</button></li>
+            </ul>
+          </span>
+        </div>
+      </div>
+    </div>
+    <hr/>
+    
+    
+      <html><head></head><body><h1 id="welcome">Welcome</h1>
+<p>Welcome to test-mkdocs.</p>
 <p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
 <h2 id="commands">Commands</h2>
 <ul>
@@ -78,93 +276,139 @@
 <li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
 <li><code>mkdocs build</code> - Build the documentation site.</li>
 <li><code>mkdocs -h</code> - Print help message and exit.</li>
+<li><code>mkdocs gh-deploy</code> - Deploy your documentation to GitHub Pages.</li>
 </ul>
 <h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
+<div class="highlight position-relative"><button class="btn copybtn position-absolute top-0 end-0"><i class="bi bi-clipboard"></i></button><pre><span></span><code>mkdocs.yml    # The configuration file.
 docs/
     index.md  # The documentation homepage.
     ...       # Other markdown pages, images and other files.
 </code></pre></div>
-            </div>
+<p>We will mainly see and modify <code>./mkdocs.yml</code> file and <code>./docs/</code> directory.</p>
+<h1 id="customize-mkdocs-theme">Customize MKDocs Theme</h1>
+<p>Please visit <a href="https://lantana.wsoft.ws/">Lantana</a> for more information.</p>
+<h2 id="install-theme">Install theme</h2>
+<div class="highlight position-relative"><button class="btn copybtn position-absolute top-0 end-0"><i class="bi bi-clipboard"></i></button><pre><span></span><code>pip install lantana
+</code></pre></div>
+<h2 id="modify-mkdocsyml">Modify mkdocs.yml</h2>
+<div class="highlight position-relative"><button class="btn copybtn position-absolute top-0 end-0"><i class="bi bi-clipboard"></i></button><span class="filename">mkdocs.yml</span><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>site_name: Tech Note
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>docs_dir : 'docs'
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>extra_javascript:
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>  - https://polyfill.io/v3/polyfill.min.js?features=es6
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>language : ja
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>theme: lantana
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a>
+<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a>visible_search : true
+<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a>
+<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a>plugins:
+<a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a>    - search:
+<a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a>        lang : 'ja'
+<a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a>        min_search_length: 2
+<a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a>    - macros
+<a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a>    - awesome-pages
+<a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a>    - git-authors
+<a href="#__codelineno-0-23" id="__codelineno-0-23" name="__codelineno-0-23"></a>
+<a href="#__codelineno-0-24" id="__codelineno-0-24" name="__codelineno-0-24"></a>markdown_extensions:
+<a href="#__codelineno-0-25" id="__codelineno-0-25" name="__codelineno-0-25"></a>    - attr_list
+<a href="#__codelineno-0-26" id="__codelineno-0-26" name="__codelineno-0-26"></a>    - pymdownx.highlight:
+<a href="#__codelineno-0-27" id="__codelineno-0-27" name="__codelineno-0-27"></a>       anchor_linenums: true
+<a href="#__codelineno-0-28" id="__codelineno-0-28" name="__codelineno-0-28"></a>    - admonition
+<a href="#__codelineno-0-29" id="__codelineno-0-29" name="__codelineno-0-29"></a>    - pymdownx.arithmatex:
+<a href="#__codelineno-0-30" id="__codelineno-0-30" name="__codelineno-0-30"></a>       generic : true
+<a href="#__codelineno-0-31" id="__codelineno-0-31" name="__codelineno-0-31"></a>    - md_in_html
+<a href="#__codelineno-0-32" id="__codelineno-0-32" name="__codelineno-0-32"></a>    - pymdownx.details
+<a href="#__codelineno-0-33" id="__codelineno-0-33" name="__codelineno-0-33"></a>    - pymdownx.superfences:
+<a href="#__codelineno-0-34" id="__codelineno-0-34" name="__codelineno-0-34"></a>        custom_fences:
+<a href="#__codelineno-0-35" id="__codelineno-0-35" name="__codelineno-0-35"></a>          - name: mermaid
+<a href="#__codelineno-0-36" id="__codelineno-0-36" name="__codelineno-0-36"></a>            class: mermaid
+<a href="#__codelineno-0-37" id="__codelineno-0-37" name="__codelineno-0-37"></a>            format: !!python/name:pymdownx.superfences.fence_code_format
+<a href="#__codelineno-0-38" id="__codelineno-0-38" name="__codelineno-0-38"></a>    - lantana.mermaid_precompile
+<a href="#__codelineno-0-39" id="__codelineno-0-39" name="__codelineno-0-39"></a>    - lantana.codeblock_copybtn
+<a href="#__codelineno-0-40" id="__codelineno-0-40" name="__codelineno-0-40"></a>    - pymdownx.snippets
+<a href="#__codelineno-0-41" id="__codelineno-0-41" name="__codelineno-0-41"></a>    - pymdownx.critic
+<a href="#__codelineno-0-42" id="__codelineno-0-42" name="__codelineno-0-42"></a>    - pymdownx.caret
+<a href="#__codelineno-0-43" id="__codelineno-0-43" name="__codelineno-0-43"></a>    - pymdownx.keys
+<a href="#__codelineno-0-44" id="__codelineno-0-44" name="__codelineno-0-44"></a>    - pymdownx.mark
+<a href="#__codelineno-0-45" id="__codelineno-0-45" name="__codelineno-0-45"></a>    - pymdownx.tilde
+<a href="#__codelineno-0-46" id="__codelineno-0-46" name="__codelineno-0-46"></a>    - pymdownx.emoji:
+<a href="#__codelineno-0-47" id="__codelineno-0-47" name="__codelineno-0-47"></a>        emoji_index: !!python/name:materialx.emoji.twemoji
+<a href="#__codelineno-0-48" id="__codelineno-0-48" name="__codelineno-0-48"></a>        emoji_generator: !!python/name:materialx.emoji.to_svg
+<a href="#__codelineno-0-49" id="__codelineno-0-49" name="__codelineno-0-49"></a>    - pymdownx.tasklist:
+<a href="#__codelineno-0-50" id="__codelineno-0-50" name="__codelineno-0-50"></a>        custom_checkbox: true
+<a href="#__codelineno-0-51" id="__codelineno-0-51" name="__codelineno-0-51"></a>    - pymdownx.magiclink
+<a href="#__codelineno-0-52" id="__codelineno-0-52" name="__codelineno-0-52"></a>    - pymdownx.striphtml
+</code></pre></div>
+<h2 id="example-mermaid">Example mermaid</h2>
+<pre class="mermaid"><html><head></head><body><svg aria-roledescription="flowchart-v2" class="flowchart" id="mermaid-svg" role="graphics-document document" style="max-width: 204.640625px;" viewBox="0 0 204.640625 278" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style xmlns="http://www.w3.org/1999/xhtml">@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css");</style><style>#mermaid-svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}#mermaid-svg .error-icon{fill:#552222;}#mermaid-svg .error-text{fill:#552222;stroke:#552222;}#mermaid-svg .edge-thickness-normal{stroke-width:1px;}#mermaid-svg .edge-thickness-thick{stroke-width:3.5px;}#mermaid-svg .edge-pattern-solid{stroke-dasharray:0;}#mermaid-svg .edge-thickness-invisible{stroke-width:0;fill:none;}#mermaid-svg .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-svg .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-svg .marker{fill:#333333;stroke:#333333;}#mermaid-svg .marker.cross{stroke:#333333;}#mermaid-svg svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-svg p{margin:0;}#mermaid-svg .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#333;}#mermaid-svg .cluster-label text{fill:#333;}#mermaid-svg .cluster-label span{color:#333;}#mermaid-svg .cluster-label span p{background-color:transparent;}#mermaid-svg .label text,#mermaid-svg span{fill:#333;color:#333;}#mermaid-svg .node rect,#mermaid-svg .node circle,#mermaid-svg .node ellipse,#mermaid-svg .node polygon,#mermaid-svg .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#mermaid-svg .rough-node .label text,#mermaid-svg .node .label text{text-anchor:middle;}#mermaid-svg .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#mermaid-svg .node .label{text-align:center;}#mermaid-svg .node.clickable{cursor:pointer;}#mermaid-svg .arrowheadPath{fill:#333333;}#mermaid-svg .edgePath .path{stroke:#333333;stroke-width:2.0px;}#mermaid-svg .flowchart-link{stroke:#333333;fill:none;}#mermaid-svg .edgeLabel{background-color:rgba(232,232,232, 0.8);text-align:center;}#mermaid-svg .edgeLabel p{background-color:rgba(232,232,232, 0.8);}#mermaid-svg .edgeLabel rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#mermaid-svg .labelBkg{background-color:rgba(232, 232, 232, 0.5);}#mermaid-svg .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#mermaid-svg .cluster text{fill:#333;}#mermaid-svg .cluster span{color:#333;}#mermaid-svg div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(80, 100%, 96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#mermaid-svg .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#333;}#mermaid-svg :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style><g><marker class="marker flowchart-v2" id="mermaid-svg_flowchart-v2-pointEnd" markerHeight="8" markerUnits="userSpaceOnUse" markerWidth="8" orient="auto" refX="5" refY="5" viewBox="0 0 10 10"><path class="arrowMarkerPath" d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker><marker class="marker flowchart-v2" id="mermaid-svg_flowchart-v2-pointStart" markerHeight="8" markerUnits="userSpaceOnUse" markerWidth="8" orient="auto" refX="4.5" refY="5" viewBox="0 0 10 10"><path class="arrowMarkerPath" d="M 0 5 L 10 10 L 10 0 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker><marker class="marker flowchart-v2" id="mermaid-svg_flowchart-v2-circleEnd" markerHeight="11" markerUnits="userSpaceOnUse" markerWidth="11" orient="auto" refX="11" refY="5" viewBox="0 0 10 10"><circle class="arrowMarkerPath" cx="5" cy="5" r="5" style="stroke-width: 1; stroke-dasharray: 1, 0;"></circle></marker><marker class="marker flowchart-v2" id="mermaid-svg_flowchart-v2-circleStart" markerHeight="11" markerUnits="userSpaceOnUse" markerWidth="11" orient="auto" refX="-1" refY="5" viewBox="0 0 10 10"><circle class="arrowMarkerPath" cx="5" cy="5" r="5" style="stroke-width: 1; stroke-dasharray: 1, 0;"></circle></marker><marker class="marker cross flowchart-v2" id="mermaid-svg_flowchart-v2-crossEnd" markerHeight="11" markerUnits="userSpaceOnUse" markerWidth="11" orient="auto" refX="12" refY="5.2" viewBox="0 0 11 11"><path class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9" style="stroke-width: 2; stroke-dasharray: 1, 0;"></path></marker><marker class="marker cross flowchart-v2" id="mermaid-svg_flowchart-v2-crossStart" markerHeight="11" markerUnits="userSpaceOnUse" markerWidth="11" orient="auto" refX="-1" refY="5.2" viewBox="0 0 11 11"><path class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9" style="stroke-width: 2; stroke-dasharray: 1, 0;"></path></marker><g class="root"><g class="clusters"></g><g class="edgePaths"><path class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" d="M71.214,62L66.434,66.167C61.653,70.333,52.092,78.667,47.312,84.917C42.531,91.167,42.531,95.333,42.531,98.833C42.531,102.333,42.531,105.167,42.531,106.583L42.531,108" id="L_A_B_0" marker-end="url(#mermaid-svg_flowchart-v2-pointEnd)" style=""></path><path class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" d="M133.169,62L137.949,66.167C142.73,70.333,152.291,78.667,157.071,84.917C161.852,91.167,161.852,95.333,161.852,98.833C161.852,102.333,161.852,105.167,161.852,106.583L161.852,108" id="L_A_C_1" marker-end="url(#mermaid-svg_flowchart-v2-pointEnd)" style=""></path><path class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" d="M42.531,166L42.531,170.167C42.531,174.333,42.531,182.667,44.921,188.917C47.312,195.167,52.092,199.333,56.37,203.062C60.648,206.791,64.423,210.081,66.311,211.726L68.199,213.372" id="L_B_D_2" marker-end="url(#mermaid-svg_flowchart-v2-pointEnd)" style=""></path><path class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" d="M161.852,166L161.852,170.167C161.852,174.333,161.852,182.667,159.461,188.917C157.071,195.167,152.291,199.333,148.013,203.062C143.735,206.791,139.96,210.081,138.072,211.726L136.184,213.372" id="L_C_D_3" marker-end="url(#mermaid-svg_flowchart-v2-pointEnd)" style=""></path></g><g class="edgeLabels"><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject height="0" width="0"><div class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject height="0" width="0"><div class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject height="0" width="0"><div class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject height="0" width="0"><div class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span class="edgeLabel"></span></div></foreignObject></g></g></g><g class="nodes"><g class="node default" id="flowchart-A-0" transform="translate(102.19140625, 35)"><rect class="basic label-container" data-et="node" data-id="abc" height="54" style="" width="69.4375" x="-34.71875" y="-27"></rect><g class="label" style="" transform="translate(-4.71875, -12)"><rect></rect><foreignObject height="24" width="9.4375"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span class="nodeLabel"><p>A</p></span></div></foreignObject></g></g><g class="node default" id="flowchart-B-1" transform="translate(42.53125, 139)"><rect class="basic label-container" data-et="node" data-id="abc" height="54" style="" width="69.0625" x="-34.53125" y="-27"></rect><g class="label" style="" transform="translate(-4.53125, -12)"><rect></rect><foreignObject height="24" width="9.0625"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span class="nodeLabel"><p>B</p></span></div></foreignObject></g></g><g class="node default" id="flowchart-C-3" transform="translate(161.8515625, 139)"><rect class="basic label-container" data-et="node" data-id="abc" height="54" style="" width="69.578125" x="-34.7890625" y="-27"></rect><g class="label" style="" transform="translate(-4.7890625, -12)"><rect></rect><foreignObject height="24" width="9.578125"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span class="nodeLabel"><p>C</p></span></div></foreignObject></g></g><g class="node default" id="flowchart-D-5" transform="translate(102.19140625, 243)"><rect class="basic label-container" data-et="node" data-id="abc" height="54" style="" width="69.8125" x="-34.90625" y="-27"></rect><g class="label" style="" transform="translate(-4.90625, -12)"><rect></rect><foreignObject height="24" width="9.8125"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span class="nodeLabel"><p>D</p></span></div></foreignObject></g></g></g></g></g></svg></body></html></pre></body></html><html><head><script>$('.copybtn').click(function (){
+    const selection = window.getSelection();
+    const code = this.parentNode;
+    selection.selectAllChildren(code.children[code.children.length-1]);
+    document.execCommand('copy');
+    this.querySelector('.bi-clipboard').classList.add('text-success');
+    this.querySelector('.bi-clipboard').classList.replace('bi-clipboard','bi-clipboard-check');
+});</script></head><body></body></html>
+    
+    
+
+      </div>
+      </div>
+      <script src="js/theme.js"></script>
+      
+      
+      
+    <script async src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    <script async src="search/main.js"></script>
+      
+      
+    </main>
+  </div>
+  
+  
+  
+  
+  
+  <footer class="border-top footer text-muted .position-absolute.bottom-0.start-50.translate-middle-x" style="padding-top:15px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md">
+          
+          <p>Copyright &copy; 2024 oscar5201m. All Rights Reserved.</p>
+          
+        </div>
+        
+      </div>
+    </div>
+  </footer>
+  
+  
+
+<div class="modal fade" id="searchModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="searchModal" aria-hidden="true">
+  <div class="modal-dialog modal-lg print-hide">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="searchModalLabel">検索</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
+      </div>
+      <div class="modal-body">
+        <div class="input-group mb-3">
+          <input id="mkdocs-search-query" type="text" class="form-control" aria-label="検索" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div id="mkdocs-search-results">
+          キーワードを入力して検索を始めましょう
         </div>
 
-        <footer class="col-md-12">
-            <hr>
-            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script src="js/bootstrap.bundle.min.js"></script>
-        <script>
-            var base_url = ".",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
-        </script>
-        <script src="js/base.js"></script>
-        <script src="search/main.js"></script>
-
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p>From here you can search these documents. Enter your search terms below.</p>
-                <form>
-                    <div class="form-group">
-                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
+      </div>
     </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
+  </div>
 </div>
-
-    </body>
+</body>
 </html>
-
-<!--
-MkDocs version : 1.6.1
-Build Date UTC : 2024-09-14 15:49:34.685483+00:00
--->
