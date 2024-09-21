@@ -1,13 +1,5 @@
 site_name: Tech Note
 
-# nav:
-#   - Welcome: index.md
-#   - section1: section1.md
-#   - sub1:
-#       - subsub1: dir/subsec.md
-#   - sub2:
-#       - subsub2: dir 1/subsection1.md
-
 docs_dir : 'docs'
 
 extra_javascript:
