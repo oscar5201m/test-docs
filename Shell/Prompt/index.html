@@ -10,7 +10,7 @@
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#111111" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#eeeeee" media="(prefers-color-scheme: dark)">
-  <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../css/bootstrap.min.css">
   
 
   
@@ -19,22 +19,22 @@
   
 
   
-  <title>MAC Address | Tech Note</title>
+  <title>Prompt | Tech Note</title>
   
 
   
 
-  <link rel="stylesheet" href="../../../css/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="../../../css/default.min.css">
-  <link rel="stylesheet" href="../../../css/vs.min.css">
-  <link rel="stylesheet" href="../../../css/theme.css">
+  <link rel="stylesheet" href="../../css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../css/default.min.css">
+  <link rel="stylesheet" href="../../css/vs.min.css">
+  <link rel="stylesheet" href="../../css/theme.css">
   
   
   
-  <script async>var base_url = '../../..';</script>
-  <script src="../../../js/jquery-3.6.1.slim.min.js"></script>
-  <script src="../../../js/bootstrap.bundle.min.js"></script>
-  <script async src="../../../js/highlight.min.js"></script>
+  <script async>var base_url = '../..';</script>
+  <script src="../../js/jquery-3.6.1.slim.min.js"></script>
+  <script src="../../js/bootstrap.bundle.min.js"></script>
+  <script async src="../../js/highlight.min.js"></script>
 
   
   
@@ -104,24 +104,24 @@
         <ul class="list-group list-group-flush">
         
         
-        <li class="list-group-item"><a class="text-decoration-none  text-muted" href="../../..">Welcome</a></li>
+        <li class="list-group-item"><a class="text-decoration-none  text-muted" href="../..">Welcome</a></li>
         
         
         
         <li class="list-group-item">
-          <a class="nav_cop  text-body" aria-expanded="false" data-bs-toggle="collapse" role="button" >Network</a>
-          <ul class="collapse list-group list-group-flush show ">
+          <a class="nav_cop  text-muted" aria-expanded="false" data-bs-toggle="collapse" role="button" >Network</a>
+          <ul class="collapse list-group list-group-flush  ">
             
 
         
         
-            <li class="list-group-item"><a class="nav_cop  text-body" aria-expanded="false" data-bs-toggle="collapse" role="button" >MAC</a>
-              <ul class="collapse list-group list-group-flush show">
+            <li class="list-group-item"><a class="nav_cop  text-muted" aria-expanded="false" data-bs-toggle="collapse" role="button" >MAC</a>
+              <ul class="collapse list-group list-group-flush ">
                 
 
         
         
-            <li class="list-group-item"><a class="text-decoration-none  text-body" href="./">MAC Address</a></li>
+            <li class="list-group-item"><a class="text-decoration-none  text-muted" href="../../Network/MAC/MacAddress/">MAC Address</a></li>
             
         
         
@@ -138,13 +138,13 @@
         
         
         <li class="list-group-item">
-          <a class="nav_cop  text-muted" aria-expanded="false" data-bs-toggle="collapse" role="button" >Shell</a>
-          <ul class="collapse list-group list-group-flush  ">
+          <a class="nav_cop  text-body" aria-expanded="false" data-bs-toggle="collapse" role="button" >Shell</a>
+          <ul class="collapse list-group list-group-flush show ">
             
 
         
         
-            <li class="list-group-item"><a class="text-decoration-none  text-muted" href="../../../Shell/Prompt/">Prompt</a></li>
+            <li class="list-group-item"><a class="text-decoration-none  text-body" href="./">Prompt</a></li>
             
         
         
@@ -160,7 +160,7 @@
 
         
         
-            <li class="list-group-item"><a class="text-decoration-none  text-muted" href="../../../VirtualBox/Mouse/">Mouse</a></li>
+            <li class="list-group-item"><a class="text-decoration-none  text-muted" href="../../VirtualBox/Mouse/">Mouse</a></li>
             
         
         
@@ -182,7 +182,75 @@
          <hr/>
         <ul class="list-group list-group-flush">
         
-        <li class="list-group-item"><a class="text-decoration-none text-muted" href="#mac-address" >MAC Address</a>
+        <li class="list-group-item"><a class="text-decoration-none text-muted" href="#prompt" >Prompt</a>
+          
+            <ul class="list-group list-group-flush">
+            
+              
+    <li class="list-group-item"><a class="text-decoration-none text-muted" href="#ps1" >PS1の要素分解</a>
+    
+        <ul class="list-group list-group-flush">
+        
+            
+    <li class="list-group-item"><a class="text-decoration-none text-muted" href="#033-01-32-m" >\[ + \033[ + 01 + ; + 32 + m + \]</a>
+    
+    </li>
+
+        
+            
+    <li class="list-group-item"><a class="text-decoration-none text-muted" href="#u" >\u</a>
+    
+    </li>
+
+        
+            
+    <li class="list-group-item"><a class="text-decoration-none text-muted" href="#_1" >@</a>
+    
+    </li>
+
+        
+            
+    <li class="list-group-item"><a class="text-decoration-none text-muted" href="#h" >\h</a>
+    
+    </li>
+
+        
+            
+    <li class="list-group-item"><a class="text-decoration-none text-muted" href="#_2" >:</a>
+    
+    </li>
+
+        
+            
+    <li class="list-group-item"><a class="text-decoration-none text-muted" href="#w" >\w</a>
+    
+    </li>
+
+        
+            
+    <li class="list-group-item"><a class="text-decoration-none text-muted" href="#_3" >\$</a>
+    
+    </li>
+
+        
+        </ul>
+    
+    </li>
+
+            
+              
+    <li class="list-group-item"><a class="text-decoration-none text-muted" href="#_4" >色の一覧から抜粋</a>
+    
+    </li>
+
+            
+              
+    <li class="list-group-item"><a class="text-decoration-none text-muted" href="#_5" >スタイルの一覧から抜粋</a>
+    
+    </li>
+
+            
+      </ul>
           
           </li>
         
@@ -193,7 +261,7 @@
     
     <div class="col-12 col-md-8 print-main">
       
-      <h1>MAC Address</h1>
+      <h1>Prompt</h1>
       
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
@@ -202,25 +270,17 @@
         
         
         
-        <li class="breadcrumb-item active" aria-current="page">Network</li>
+        
+        
+        <li class="breadcrumb-item active" aria-current="page">Shell</li>
         
         
         
-        <li class="breadcrumb-item active" aria-current="page">MAC</li>
-        
-        
-        
-        
-        <li class="breadcrumb-item active" aria-current="page">MAC Address</li>
+        <li class="breadcrumb-item active" aria-current="page">Prompt</li>
         
         
         
 
-        
-        
-
-        
-        
         
         
         
@@ -234,10 +294,10 @@
       
       <div>
         
-        <a class="btn text-primary print-hide" href="../../.." title="Welcome"><i class="bi bi-chevron-left"></i></a>
+        <a class="btn text-primary print-hide" href="../../Network/MAC/MacAddress/" title="MAC Address"><i class="bi bi-chevron-left"></i></a>
         
         
-        <a class="btn text-primary print-hide" href="../../../Shell/Prompt/" title="Prompt"><i class="bi bi-chevron-right"></i></a>
+        <a class="btn text-primary print-hide" href="../../VirtualBox/Mouse/" title="Mouse"><i class="bi bi-chevron-right"></i></a>
         
       </div>
       
@@ -263,7 +323,7 @@
           <span class="dropdown print-hide">
             <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-share"></i></button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><button class="btn dropdown-item" onclick="share_to_twitter('MAC Address | Tech Note','');"><i class="bi bi-twitter"></i>&nbsp;Twitter</button></li>
+              <li><button class="btn dropdown-item" onclick="share_to_twitter('Prompt | Tech Note','');"><i class="bi bi-twitter"></i>&nbsp;Twitter</button></li>
               <li><button class="btn dropdown-item" onclick="share_to_facebook();"><i class="bi bi-facebook"></i>&nbsp;Facebook</button></li>
               <li><button class="btn dropdown-item" onclick="share_to_line();"><i class="bi bi-line"></i>&nbsp;LINE</button></li>
               <li><hr class="dropdown-divider"></li>
@@ -277,93 +337,166 @@
     <hr/>
     
     
-      <html><head></head><body><h1 id="mac-address">MAC Address</h1>
-<p>48-bit MACアドレスの構造</p>
-<p>先頭 8 bits の中の、0番目と1番目の bit には意味がある。</p>
-<p><img alt="the structure of 48-bit MAC address" class="img-fluid" src="../img/MAC-48_Address.png" style="height: 400px; width: 400px;"/></p>
-<p>ref. <a href="https://en.wikipedia.org/wiki/MAC_address">MAC address - Wikipedia</a></p>
+      <html><head></head><body><h1 id="prompt">Prompt</h1>
+<p>環境変数<code>PS1</code>をUbuntuを参考に設定する</p>
+<div class="highlight position-relative"><button class="btn copybtn position-absolute top-0 end-0"><i class="bi bi-clipboard"></i></button><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+</code></pre></div>
+<p><br/></p>
+<h2 id="ps1"><code>PS1</code>の要素分解</h2>
+<h3 id="033-01-32-m"><code>\[</code> + <code>\033[</code> + <code>01</code> + <code>;</code> + <code>32</code> + <code>m</code> + <code>\]</code></h3>
+<ul>
+<li>
+<p>最初と最後の <code>\[</code> と <code>\]</code> で範囲を限定する</p>
+</li>
+<li>
+<p>スタイルと色を指定するためには、<code>\033[</code> と <code>m</code>で囲む</p>
+</li>
+<li>
+<p>指定形式は、<code>\033[スタイル;色m</code></p>
+</li>
+<li>
+<p><code>\033[</code>の部分は、<code>\e[</code>と書いても良い</p>
+</li>
+<li>
+<p><code>\[\033[01;32m\]</code>は、太字の緑</p>
+</li>
+<li>
+<p><code>\[\033[00m\]</code>は、スタイルと色のリセット</p>
+</li>
+<li>
+<p><code>\[\033[01;32m\]</code>は、太字の青</p>
+</li>
+</ul>
+<h3 id="u"><code>\u</code></h3>
+<ul>
+<li>現在のユーザ名</li>
+</ul>
+<h3 id="_1"><code>@</code></h3>
+<ul>
+<li>ユーザ名とホスト名を区切る記号</li>
+</ul>
+<h3 id="h"><code>\h</code></h3>
+<ul>
+<li>現在のホスト名</li>
+</ul>
+<h3 id="_2"><code>:</code></h3>
+<ul>
+<li>ホスト名とカレントディレクトリを区切る記号</li>
+</ul>
+<h3 id="w"><code>\w</code></h3>
+<ul>
+<li>カレントディレクトリのフルパス</li>
+</ul>
+<h3 id="_3"><code>\$</code></h3>
+<ul>
+<li>一般ユーザの場合は <code>$</code> が表示され、rootユーザの場合は <code>#</code> が表示される</li>
+</ul>
+<p><br/></p>
+<h2 id="_4">色の一覧から抜粋</h2>
 <table class="table">
 <thead>
 <tr>
-<th>MACアドレスの例（抜粋）</th>
-<th>0番目</th>
-<th>1番目</th>
+<th>色</th>
+<th>フォアグラウンド</th>
+<th>バックグラウンド</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>00:xx:xx:xx:xx:xx</code></td>
-<td>ユニキャスト</td>
-<td>グローバル</td>
+<td>黒</td>
+<td>30</td>
+<td>40</td>
 </tr>
 <tr>
-<td><code>01:xx:xx:xx:xx:xx</code></td>
-<td>マルチキャスト</td>
-<td>グローバル</td>
+<td>赤</td>
+<td>31</td>
+<td>41</td>
 </tr>
 <tr>
-<td><code>02:xx:xx:xx:xx:xx</code></td>
-<td>ユニキャスト</td>
-<td>ローカル</td>
+<td>緑</td>
+<td>32</td>
+<td>42</td>
 </tr>
 <tr>
-<td><code>03:xx:xx:xx:xx:xx</code></td>
-<td>マルチキャスト</td>
-<td>ローカル</td>
+<td>黄</td>
+<td>33</td>
+<td>43</td>
+</tr>
+<tr>
+<td>青</td>
+<td>34</td>
+<td>44</td>
+</tr>
+<tr>
+<td>紫</td>
+<td>35</td>
+<td>45</td>
+</tr>
+<tr>
+<td>シアン</td>
+<td>36</td>
+<td>46</td>
+</tr>
+<tr>
+<td>白</td>
+<td>37</td>
+<td>47</td>
 </tr>
 </tbody>
 </table>
 <p><br/></p>
-<p>他にも、予約済みの特殊なMACアドレスが「IEEE Standards Group MAC Addresses」の形でまとめられている。</p>
-<p>ref. <a href="https://standards.ieee.org/products-programs/regauth/grpmac/public/">IEEE Standard Group MAC Addresses</a></p>
+<h2 id="_5">スタイルの一覧から抜粋</h2>
 <table class="table">
 <thead>
 <tr>
-<th>特殊なMACアドレスの例（抜粋）</th>
-<th>使用用途</th>
+<th>スタイル</th>
+<th>コード</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>ff:ff:ff:ff:ff:ff</code></td>
-<td>ブロードキャスト</td>
+<td>リセット</td>
+<td>0</td>
 </tr>
 <tr>
-<td><code>01:00:5e:xx:xx:xx</code></td>
-<td>IPv4マルチキャスト用</td>
+<td>太字</td>
+<td>1</td>
 </tr>
 <tr>
-<td><code>33:33:xx:xx:xx:xx</code></td>
-<td>IPv6マルチキャスト用</td>
+<td>くすんだ文字</td>
+<td>2</td>
 </tr>
 <tr>
-<td><code>00:00:0c:07:ac:xx</code></td>
-<td>HSRP (Hot Standby Router Protocol) 用</td>
+<td>下線</td>
+<td>4</td>
 </tr>
 <tr>
-<td><code>00:00:5e:00:01:xx</code></td>
-<td>VRRP (Virtual Router Redundancy Protocol) やCARP用</td>
+<td>点滅</td>
+<td>5</td>
 </tr>
 <tr>
-<td><code>01:00:0c:cc:cc:cc</code></td>
-<td>Cisco CDP用</td>
+<td>反転</td>
+<td>7</td>
 </tr>
 <tr>
-<td><code>01:80:c2:00:00:00</code></td>
-<td>STP (Spanning Tree Protocol) 用</td>
-</tr>
-<tr>
-<td><code>01:80:c2:00:00:0e</code></td>
-<td>LLDP (Link Layer Discovery Protocol) 用</td>
+<td>隠し文字</td>
+<td>8</td>
 </tr>
 </tbody>
-</table></body></html>
+</table></body></html><html><head><script>$('.copybtn').click(function (){
+    const selection = window.getSelection();
+    const code = this.parentNode;
+    selection.selectAllChildren(code.children[code.children.length-1]);
+    document.execCommand('copy');
+    this.querySelector('.bi-clipboard').classList.add('text-success');
+    this.querySelector('.bi-clipboard').classList.replace('bi-clipboard','bi-clipboard-check');
+});</script></head><body></body></html>
     
     
 
       </div>
       </div>
-      <script src="../../../js/theme.js"></script>
+      <script src="../../js/theme.js"></script>
       
       
       
@@ -371,7 +504,7 @@
       
     <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
-    <script async src="../../../search/main.js"></script>
+    <script async src="../../search/main.js"></script>
       
       
     </main>

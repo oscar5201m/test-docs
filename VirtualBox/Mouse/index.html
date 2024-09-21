@@ -10,7 +10,7 @@
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#111111" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#eeeeee" media="(prefers-color-scheme: dark)">
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../css/bootstrap.min.css">
   
 
   
@@ -19,22 +19,22 @@
   
 
   
-  <title>Tech Note</title>
+  <title>Mouse | Tech Note</title>
   
 
   
 
-  <link rel="stylesheet" href="/css/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="/css/default.min.css">
-  <link rel="stylesheet" href="/css/vs.min.css">
-  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="../../css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../css/default.min.css">
+  <link rel="stylesheet" href="../../css/vs.min.css">
+  <link rel="stylesheet" href="../../css/theme.css">
   
   
   
-  <script async>var base_url = '/';</script>
-  <script src="/js/jquery-3.6.1.slim.min.js"></script>
-  <script src="/js/bootstrap.bundle.min.js"></script>
-  <script async src="/js/highlight.min.js"></script>
+  <script async>var base_url = '../..';</script>
+  <script src="../../js/jquery-3.6.1.slim.min.js"></script>
+  <script src="../../js/bootstrap.bundle.min.js"></script>
+  <script async src="../../js/highlight.min.js"></script>
 
   
   
@@ -80,6 +80,8 @@
                 
                 
                 
+                <button class="btn btn-outline-secondary" onclick="toggle_toc(this);" type="button" data-bs-toggle="collapse" data-bs-target="#tol"><i class="bi bi-list-ul"></i></button>
+                
                 
             </div>
             </p>
@@ -102,7 +104,7 @@
         <ul class="list-group list-group-flush">
         
         
-        <li class="list-group-item"><a class="text-decoration-none  text-muted" href="/.">Welcome</a></li>
+        <li class="list-group-item"><a class="text-decoration-none  text-muted" href="../..">Welcome</a></li>
         
         
         
@@ -119,7 +121,7 @@
 
         
         
-            <li class="list-group-item"><a class="text-decoration-none  text-muted" href="/Network/MAC/MacAddress/">MAC Address</a></li>
+            <li class="list-group-item"><a class="text-decoration-none  text-muted" href="../../Network/MAC/MacAddress/">MAC Address</a></li>
             
         
         
@@ -142,7 +144,7 @@
 
         
         
-            <li class="list-group-item"><a class="text-decoration-none  text-muted" href="/Shell/Prompt/">Prompt</a></li>
+            <li class="list-group-item"><a class="text-decoration-none  text-muted" href="../../Shell/Prompt/">Prompt</a></li>
             
         
         
@@ -152,13 +154,13 @@
         
         
         <li class="list-group-item">
-          <a class="nav_cop  text-muted" aria-expanded="false" data-bs-toggle="collapse" role="button" >VirtualBox</a>
-          <ul class="collapse list-group list-group-flush  ">
+          <a class="nav_cop  text-body" aria-expanded="false" data-bs-toggle="collapse" role="button" >VirtualBox</a>
+          <ul class="collapse list-group list-group-flush show ">
             
 
         
         
-            <li class="list-group-item"><a class="text-decoration-none  text-muted" href="/VirtualBox/Mouse/">Mouse</a></li>
+            <li class="list-group-item"><a class="text-decoration-none  text-body" href="./">Mouse</a></li>
             
         
         
@@ -171,21 +173,112 @@
     </div>
     
        
-<div class="col-12 col-md-8">
-  <p class="text-center display-3 text-primary"><i class="bi bi-cloud-sleet"></i></p>
-  <p class="text-center display-4">404 Not Found</p>
-  <p>お探しのページは見つかりませんでした。次のいずれかが原因の可能性があります。</p>
-  <ul>
-    <li>サイトは一時的にメンテナンス中である</li>
-    <li>この記事は移動もしくは削除された</li>
-  </ul>
-  <p class="d-md-flex d-none">画面左側の記事一覧および右上の検索ボックスより、記事をお探しいただけます。</p>
-  <p class="d-md-none">画面上部の「<i class="bi bi-book"></i>」アイコンをクリックすることで、記事をお探しいただけます。</p>
-</div> 
+    
+    
+    
+    <div class="col-12 col-md-2 order-md-3 print-hide">
+      <div class="collapse d-md-block text-nowrap" id="tol"  style="overflow-x:scroll;">
+        <span>目次</span>
+         <hr/>
+        <ul class="list-group list-group-flush">
+        
+        <li class="list-group-item"><a class="text-decoration-none text-muted" href="#mouse" >Mouse</a>
+          
+          </li>
+        
+      </ul>
+      </div>
+    </div>
+    
+    
+    <div class="col-12 col-md-8 print-main">
+      
+      <h1>Mouse</h1>
+      
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">Tech Note</li>
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="breadcrumb-item active" aria-current="page">VirtualBox</li>
+        
+        
+        
+        <li class="breadcrumb-item active" aria-current="page">Mouse</li>
+        
+        
+        
+
+        
+        
+        
+      </ol>
+    </nav>
+    
+    
+    <div class="d-flex justify-content-between">
+      
+      <div>
+        
+        <a class="btn text-primary print-hide" href="../../Shell/Prompt/" title="Prompt"><i class="bi bi-chevron-left"></i></a>
+        
+        
+        <a class="btn text-muted print-hide"><i class="bi bi-chevron-right"></i></a>
+        
+      </div>
+      
+      
+      <div>
+        <div>
+          
+          
+          <small><span class='git-page-authors git-authors'><a href='mailto:mike.oscar.5201@gmail.com'>oscar5201m</a></span></small>
+          <span>|</span>
+          
+          
+          
+          
+          
+          <button class="btn print-block" title="このページを印刷" onclick="window.print();"><i class="bi bi-printer"></i></button>
+          <button class="btn print-visible d-none" onclick="print_normal();" title="新しいタブで開く"><i class="bi bi-arrow-up-right-square"></i></button>
+          
+          
+          <a class="btn disabled print-hide"><i class="bi bi-pencil"></i></a>
+          
+          
+          <span class="dropdown print-hide">
+            <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-share"></i></button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><button class="btn dropdown-item" onclick="share_to_twitter('Mouse | Tech Note','');"><i class="bi bi-twitter"></i>&nbsp;Twitter</button></li>
+              <li><button class="btn dropdown-item" onclick="share_to_facebook();"><i class="bi bi-facebook"></i>&nbsp;Facebook</button></li>
+              <li><button class="btn dropdown-item" onclick="share_to_line();"><i class="bi bi-line"></i>&nbsp;LINE</button></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><button class="btn dropdown-item" onclick="print_view();"><i class="bi bi-file-earmark-text"></i>&nbsp;埋込モードで表示</button></li>
+              <li><button class="btn dropdown-item" id="page-url-copy-btn"><i class="bi bi-clipboard"></i>&nbsp;URLをコピー</button></li>
+            </ul>
+          </span>
+        </div>
+      </div>
+    </div>
+    <hr/>
+    
+    
+      <html><head></head><body><h1 id="mouse">Mouse</h1>
+<p>マウス統合機能が原因で、マウスが仮想マシンにキャプチャされてしまい、抜け出せない場合の対処法。</p>
+<p>Tips on what to do if the Mouse Integration feature captures your mouse to get stuck in a virtual machine and you can't get out of it.</p>
+<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-delete">Del</kbd></span></p></body></html>
+    
+    
 
       </div>
       </div>
-      <script src="/js/theme.js"></script>
+      <script src="../../js/theme.js"></script>
       
       
       
@@ -193,7 +286,7 @@
       
     <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
-    <script async src="/search/main.js"></script>
+    <script async src="../../search/main.js"></script>
       
       
     </main>
