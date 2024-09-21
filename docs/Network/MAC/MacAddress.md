@@ -10,4 +10,4 @@
     onerror="this.onerror=null; this.src='./img/MAC-48_Address.png';"
 />
 
-cf. https://en.wikipedia.org/wiki/MAC_address
+ref. Wikipedia, "MAC address", https://en.wikipedia.org/wiki/MAC_address

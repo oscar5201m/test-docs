@@ -19,7 +19,7 @@
   
 
   
-  <title>Welcome to test-mkdocs | Tech Note</title>
+  <title>Welcome | Tech Note</title>
   
 
   
@@ -104,22 +104,31 @@
         <ul class="list-group list-group-flush">
         
         
-        <li class="list-group-item"><a class="text-decoration-none  text-body" href=".">Welcome to test-mkdocs</a></li>
-        
-        
-        
-        <li class="list-group-item"><a class="text-decoration-none  text-muted" href="section1/">セクション</a></li>
+        <li class="list-group-item"><a class="text-decoration-none  text-body" href=".">Welcome</a></li>
         
         
         
         <li class="list-group-item">
-          <a class="nav_cop  text-muted" aria-expanded="false" data-bs-toggle="collapse" role="button" >Dir 1</a>
+          <a class="nav_cop  text-muted" aria-expanded="false" data-bs-toggle="collapse" role="button" >Network</a>
           <ul class="collapse list-group list-group-flush  ">
             
 
         
         
-            <li class="list-group-item"><a class="text-decoration-none  text-muted" href="dir%201/subsection1/">aaa</a></li>
+            <li class="list-group-item"><a class="nav_cop  text-muted" aria-expanded="false" data-bs-toggle="collapse" role="button" >MAC</a>
+              <ul class="collapse list-group list-group-flush ">
+                
+
+        
+        
+            <li class="list-group-item"><a class="text-decoration-none  text-muted" href="Network/MAC/MacAddress/">MAC Address</a></li>
+            
+        
+        
+              </ul>
+            </li>
+        
+            
             
         
         
@@ -141,7 +150,7 @@
          <hr/>
         <ul class="list-group list-group-flush">
         
-        <li class="list-group-item"><a class="text-decoration-none text-muted" href="#welcome-to-test-mkdocs" >Welcome to test-mkdocs</a>
+        <li class="list-group-item"><a class="text-decoration-none text-muted" href="#welcome" >Welcome</a>
           
             <ul class="list-group list-group-flush">
             
@@ -166,13 +175,19 @@
             <ul class="list-group list-group-flush">
             
               
-    <li class="list-group-item"><a class="text-decoration-none text-muted" href="#install-theme" >install theme</a>
+    <li class="list-group-item"><a class="text-decoration-none text-muted" href="#install-theme" >Install theme</a>
     
     </li>
 
             
               
-    <li class="list-group-item"><a class="text-decoration-none text-muted" href="#modify-mkdocsyml" >modify mkdocs.yml</a>
+    <li class="list-group-item"><a class="text-decoration-none text-muted" href="#modify-mkdocsyml" >Modify mkdocs.yml</a>
+    
+    </li>
+
+            
+              
+    <li class="list-group-item"><a class="text-decoration-none text-muted" href="#example-mermaid" >Example mermaid</a>
     
     </li>
 
@@ -188,16 +203,14 @@
     
     <div class="col-12 col-md-8 print-main">
       
-      <h1>Welcome to test-mkdocs</h1>
+      <h1>Welcome</h1>
       
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item active" aria-current="page">Tech Note</li>
         
         
-        <li class="breadcrumb-item active" aria-current="page">Welcome to test-mkdocs</li>
-        
-        
+        <li class="breadcrumb-item active" aria-current="page">Welcome</li>
         
         
         
@@ -214,7 +227,7 @@
         <a class="btn text-muted print-hide"><i class="bi bi-chevron-left"></i></a>
         
         
-        <a class="btn text-primary print-hide" href="section1/" title="セクション"><i class="bi bi-chevron-right"></i></a>
+        <a class="btn text-primary print-hide" href="Network/MAC/MacAddress/" title="MAC Address"><i class="bi bi-chevron-right"></i></a>
         
       </div>
       
@@ -223,7 +236,7 @@
         <div>
           
           
-          <small><span class='git-page-authors git-authors'><a href='mailto:not.committed.yet'>Not Committed Yet</a>, <a href='mailto:mike.oscar.5201@gmail.com'>oscar5201m</a></span></small>
+          <small><span class='git-page-authors git-authors'><a href='mailto:mike.oscar.5201@gmail.com'>oscar5201m</a></span></small>
           <span>|</span>
           
           
@@ -240,7 +253,7 @@
           <span class="dropdown print-hide">
             <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-share"></i></button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><button class="btn dropdown-item" onclick="share_to_twitter('Welcome to test-mkdocs | Tech Note','');"><i class="bi bi-twitter"></i>&nbsp;Twitter</button></li>
+              <li><button class="btn dropdown-item" onclick="share_to_twitter('Welcome | Tech Note','');"><i class="bi bi-twitter"></i>&nbsp;Twitter</button></li>
               <li><button class="btn dropdown-item" onclick="share_to_facebook();"><i class="bi bi-facebook"></i>&nbsp;Facebook</button></li>
               <li><button class="btn dropdown-item" onclick="share_to_line();"><i class="bi bi-line"></i>&nbsp;LINE</button></li>
               <li><hr class="dropdown-divider"></li>
@@ -254,7 +267,8 @@
     <hr/>
     
     
-      <html><head></head><body><h1 id="welcome-to-test-mkdocs">Welcome to test-mkdocs</h1>
+      <html><head></head><body><h1 id="welcome">Welcome</h1>
+<p>Welcome to test-mkdocs.</p>
 <p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
 <h2 id="commands">Commands</h2>
 <ul>
@@ -262,6 +276,7 @@
 <li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
 <li><code>mkdocs build</code> - Build the documentation site.</li>
 <li><code>mkdocs -h</code> - Print help message and exit.</li>
+<li><code>mkdocs gh-deploy</code> - Deploy your documentation to GitHub Pages.</li>
 </ul>
 <h2 id="project-layout">Project layout</h2>
 <div class="highlight position-relative"><button class="btn copybtn position-absolute top-0 end-0"><i class="bi bi-clipboard"></i></button><pre><span></span><code>mkdocs.yml    # The configuration file.
@@ -269,12 +284,13 @@ docs/
     index.md  # The documentation homepage.
     ...       # Other markdown pages, images and other files.
 </code></pre></div>
+<p>We will mainly see and modify <code>./mkdocs.yml</code> file and <code>./docs/</code> directory.</p>
 <h1 id="customize-mkdocs-theme">Customize MKDocs Theme</h1>
-<p>Please refer to <a href="https://lantana.wsoft.ws/">Lantana</a>.</p>
-<h2 id="install-theme">install theme</h2>
+<p>Please visit <a href="https://lantana.wsoft.ws/">Lantana</a> for more information.</p>
+<h2 id="install-theme">Install theme</h2>
 <div class="highlight position-relative"><button class="btn copybtn position-absolute top-0 end-0"><i class="bi bi-clipboard"></i></button><pre><span></span><code>pip install lantana
 </code></pre></div>
-<h2 id="modify-mkdocsyml">modify mkdocs.yml</h2>
+<h2 id="modify-mkdocsyml">Modify mkdocs.yml</h2>
 <div class="highlight position-relative"><button class="btn copybtn position-absolute top-0 end-0"><i class="bi bi-clipboard"></i></button><span class="filename">mkdocs.yml</span><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>site_name: Tech Note
 <a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>
 <a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>docs_dir : 'docs'
@@ -328,6 +344,7 @@ docs/
 <a href="#__codelineno-0-51" id="__codelineno-0-51" name="__codelineno-0-51"></a>    - pymdownx.magiclink
 <a href="#__codelineno-0-52" id="__codelineno-0-52" name="__codelineno-0-52"></a>    - pymdownx.striphtml
 </code></pre></div>
+<h2 id="example-mermaid">Example mermaid</h2>
 <pre class="mermaid"><html><head></head><body><svg aria-roledescription="flowchart-v2" class="flowchart" id="mermaid-svg" role="graphics-document document" style="max-width: 204.640625px;" viewBox="0 0 204.640625 278" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style xmlns="http://www.w3.org/1999/xhtml">@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css");</style><style>#mermaid-svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}#mermaid-svg .error-icon{fill:#552222;}#mermaid-svg .error-text{fill:#552222;stroke:#552222;}#mermaid-svg .edge-thickness-normal{stroke-width:1px;}#mermaid-svg .edge-thickness-thick{stroke-width:3.5px;}#mermaid-svg .edge-pattern-solid{stroke-dasharray:0;}#mermaid-svg .edge-thickness-invisible{stroke-width:0;fill:none;}#mermaid-svg .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-svg .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-svg .marker{fill:#333333;stroke:#333333;}#mermaid-svg .marker.cross{stroke:#333333;}#mermaid-svg svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-svg p{margin:0;}#mermaid-svg .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#333;}#mermaid-svg .cluster-label text{fill:#333;}#mermaid-svg .cluster-label span{color:#333;}#mermaid-svg .cluster-label span p{background-color:transparent;}#mermaid-svg .label text,#mermaid-svg span{fill:#333;color:#333;}#mermaid-svg .node rect,#mermaid-svg .node circle,#mermaid-svg .node ellipse,#mermaid-svg .node polygon,#mermaid-svg .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#mermaid-svg .rough-node .label text,#mermaid-svg .node .label text{text-anchor:middle;}#mermaid-svg .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#mermaid-svg .node .label{text-align:center;}#mermaid-svg .node.clickable{cursor:pointer;}#mermaid-svg .arrowheadPath{fill:#333333;}#mermaid-svg .edgePath .path{stroke:#333333;stroke-width:2.0px;}#mermaid-svg .flowchart-link{stroke:#333333;fill:none;}#mermaid-svg .edgeLabel{background-color:rgba(232,232,232, 0.8);text-align:center;}#mermaid-svg .edgeLabel p{background-color:rgba(232,232,232, 0.8);}#mermaid-svg .edgeLabel rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#mermaid-svg .labelBkg{background-color:rgba(232, 232, 232, 0.5);}#mermaid-svg .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#mermaid-svg .cluster text{fill:#333;}#mermaid-svg .cluster span{color:#333;}#mermaid-svg div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(80, 100%, 96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#mermaid-svg .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#333;}#mermaid-svg :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style><g><marker class="marker flowchart-v2" id="mermaid-svg_flowchart-v2-pointEnd" markerHeight="8" markerUnits="userSpaceOnUse" markerWidth="8" orient="auto" refX="5" refY="5" viewBox="0 0 10 10"><path class="arrowMarkerPath" d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker><marker class="marker flowchart-v2" id="mermaid-svg_flowchart-v2-pointStart" markerHeight="8" markerUnits="userSpaceOnUse" markerWidth="8" orient="auto" refX="4.5" refY="5" viewBox="0 0 10 10"><path class="arrowMarkerPath" d="M 0 5 L 10 10 L 10 0 z" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker><marker class="marker flowchart-v2" id="mermaid-svg_flowchart-v2-circleEnd" markerHeight="11" markerUnits="userSpaceOnUse" markerWidth="11" orient="auto" refX="11" refY="5" viewBox="0 0 10 10"><circle class="arrowMarkerPath" cx="5" cy="5" r="5" style="stroke-width: 1; stroke-dasharray: 1, 0;"></circle></marker><marker class="marker flowchart-v2" id="mermaid-svg_flowchart-v2-circleStart" markerHeight="11" markerUnits="userSpaceOnUse" markerWidth="11" orient="auto" refX="-1" refY="5" viewBox="0 0 10 10"><circle class="arrowMarkerPath" cx="5" cy="5" r="5" style="stroke-width: 1; stroke-dasharray: 1, 0;"></circle></marker><marker class="marker cross flowchart-v2" id="mermaid-svg_flowchart-v2-crossEnd" markerHeight="11" markerUnits="userSpaceOnUse" markerWidth="11" orient="auto" refX="12" refY="5.2" viewBox="0 0 11 11"><path class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9" style="stroke-width: 2; stroke-dasharray: 1, 0;"></path></marker><marker class="marker cross flowchart-v2" id="mermaid-svg_flowchart-v2-crossStart" markerHeight="11" markerUnits="userSpaceOnUse" markerWidth="11" orient="auto" refX="-1" refY="5.2" viewBox="0 0 11 11"><path class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9" style="stroke-width: 2; stroke-dasharray: 1, 0;"></path></marker><g class="root"><g class="clusters"></g><g class="edgePaths"><path class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" d="M71.214,62L66.434,66.167C61.653,70.333,52.092,78.667,47.312,84.917C42.531,91.167,42.531,95.333,42.531,98.833C42.531,102.333,42.531,105.167,42.531,106.583L42.531,108" id="L_A_B_0" marker-end="url(#mermaid-svg_flowchart-v2-pointEnd)" style=""></path><path class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" d="M133.169,62L137.949,66.167C142.73,70.333,152.291,78.667,157.071,84.917C161.852,91.167,161.852,95.333,161.852,98.833C161.852,102.333,161.852,105.167,161.852,106.583L161.852,108" id="L_A_C_1" marker-end="url(#mermaid-svg_flowchart-v2-pointEnd)" style=""></path><path class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" d="M42.531,166L42.531,170.167C42.531,174.333,42.531,182.667,44.921,188.917C47.312,195.167,52.092,199.333,56.37,203.062C60.648,206.791,64.423,210.081,66.311,211.726L68.199,213.372" id="L_B_D_2" marker-end="url(#mermaid-svg_flowchart-v2-pointEnd)" style=""></path><path class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" d="M161.852,166L161.852,170.167C161.852,174.333,161.852,182.667,159.461,188.917C157.071,195.167,152.291,199.333,148.013,203.062C143.735,206.791,139.96,210.081,138.072,211.726L136.184,213.372" id="L_C_D_3" marker-end="url(#mermaid-svg_flowchart-v2-pointEnd)" style=""></path></g><g class="edgeLabels"><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject height="0" width="0"><div class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject height="0" width="0"><div class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject height="0" width="0"><div class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject height="0" width="0"><div class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span class="edgeLabel"></span></div></foreignObject></g></g></g><g class="nodes"><g class="node default" id="flowchart-A-0" transform="translate(102.19140625, 35)"><rect class="basic label-container" data-et="node" data-id="abc" height="54" style="" width="69.4375" x="-34.71875" y="-27"></rect><g class="label" style="" transform="translate(-4.71875, -12)"><rect></rect><foreignObject height="24" width="9.4375"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span class="nodeLabel"><p>A</p></span></div></foreignObject></g></g><g class="node default" id="flowchart-B-1" transform="translate(42.53125, 139)"><rect class="basic label-container" data-et="node" data-id="abc" height="54" style="" width="69.0625" x="-34.53125" y="-27"></rect><g class="label" style="" transform="translate(-4.53125, -12)"><rect></rect><foreignObject height="24" width="9.0625"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span class="nodeLabel"><p>B</p></span></div></foreignObject></g></g><g class="node default" id="flowchart-C-3" transform="translate(161.8515625, 139)"><rect class="basic label-container" data-et="node" data-id="abc" height="54" style="" width="69.578125" x="-34.7890625" y="-27"></rect><g class="label" style="" transform="translate(-4.7890625, -12)"><rect></rect><foreignObject height="24" width="9.578125"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span class="nodeLabel"><p>C</p></span></div></foreignObject></g></g><g class="node default" id="flowchart-D-5" transform="translate(102.19140625, 243)"><rect class="basic label-container" data-et="node" data-id="abc" height="54" style="" width="69.8125" x="-34.90625" y="-27"></rect><g class="label" style="" transform="translate(-4.90625, -12)"><rect></rect><foreignObject height="24" width="9.8125"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span class="nodeLabel"><p>D</p></span></div></foreignObject></g></g></g></g></g></svg></body></html></pre></body></html><html><head><script>$('.copybtn').click(function (){
     const selection = window.getSelection();
     const code = this.parentNode;
@@ -363,6 +380,8 @@ docs/
     <div class="container">
       <div class="row">
         <div class="col-md">
+          
+          <p>Copyright &copy; 2024 oscar5201m. All Rights Reserved.</p>
           
         </div>
         
