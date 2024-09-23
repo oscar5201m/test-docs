@@ -25,7 +25,7 @@ ref. [MAC address - Wikipedia](https://en.wikipedia.org/wiki/MAC_address)
 
 他にも、予約済みの特殊なMACアドレスが「IEEE Standards Group MAC Addresses」の形でまとめられている。
 
-ref. [IEEE Standard Group MAC Addresses](https://standards.ieee.org/products-programs/regauth/grpmac/public/)
+ref. [IEEE Standards Group MAC Addresses](https://standards.ieee.org/products-programs/regauth/grpmac/public/)
 
 | 特殊なMACアドレスの例（抜粋） | 使用用途 |
 | --- | --- |

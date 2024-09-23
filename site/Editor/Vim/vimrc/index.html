@@ -1,0 +1,468 @@
+
+<!DOCTYPE html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#111111" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#eeeeee" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+  
+
+  
+    <meta http-equiv="content-language" content="ja">
+  
+  
+
+  
+  <title>.vimrc | Tech Note</title>
+  
+
+  
+
+  <link rel="stylesheet" href="../../../css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../../css/default.min.css">
+  <link rel="stylesheet" href="../../../css/vs.min.css">
+  <link rel="stylesheet" href="../../../css/theme.css">
+  
+  
+  
+  <script async>var base_url = '../../..';</script>
+  <script src="../../../js/jquery-3.6.1.slim.min.js"></script>
+  <script src="../../../js/bootstrap.bundle.min.js"></script>
+  <script async src="../../../js/highlight.min.js"></script>
+
+  
+  
+</head>
+<body>
+  
+  
+    
+    <header>
+      <nav class="navbar navbar-expand-sm navbar-toggleable-sm  border-bottom box-shadow mb-3 ">
+        <div class="container">
+            <a class="navbar-brand text-body" asp-area="" href="/">
+              
+              
+                Tech Note
+              
+            </a>
+            <div class="print-hide">
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <div class="d-none d-md-flex input-group mb-3">
+                
+                    <input class="form-control" type="search" id="searchbox" accesskey="/" placeholder="Tech Noteで検索" aria-label="検索" aria-describedby="search-btn"/>
+                    <button class="btn btn-outline-secondary" type="button" id="search-btn" onclick="search(false);">
+                        <i class="bi bi-search"></i>
+                    </button>
+                    
+                </div>
+            </div>
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar border-bottom box-shadow mb-3 d-md-none print-hide">
+      <div class="container">
+          <div class="navbar-collapse d-flex">
+            <p>
+              <div class="d-flex input-group mb-3">
+                
+                <button class="btn btn-outline-secondary" onclick="toggle_nav(this);" type="button" data-bs-toggle="collapse" data-bs-target="#nav" title="ナビゲーションを表示"><i class="bi bi-book"></i></button>
+                
+                
+                <input class="form-control" type="search" id="searchbox_mobile" accesskey="/" placeholder="Tech Noteで検索" aria-label="検索">
+                <button class="btn btn-outline-secondary" type="button" onclick="search(true);"><i class="bi bi-search"></i></button>
+                
+                
+                
+                <button class="btn btn-outline-secondary" onclick="toggle_toc(this);" type="button" data-bs-toggle="collapse" data-bs-target="#tol"><i class="bi bi-list-ul"></i></button>
+                
+                
+            </div>
+            </p>
+          </div>
+      </div>
+    </nav>
+  </header>
+    
+  
+  
+  
+  <div class="container">
+    <main role="main" class="pb-3">
+      <div class="row">
+        
+        
+    
+    <div class="col-12 col-md-2 print-hide">
+      <div class="collapse d-md-block text-nowrap" id="nav"  style="overflow-x:scroll;">
+        <ul class="list-group list-group-flush">
+        
+        
+        <li class="list-group-item"><a class="text-decoration-none  text-muted" href="../../..">Welcome</a></li>
+        
+        
+        
+        <li class="list-group-item">
+          <a class="nav_cop  text-body" aria-expanded="false" data-bs-toggle="collapse" role="button" >Editor</a>
+          <ul class="collapse list-group list-group-flush show ">
+            
+
+        
+        
+            <li class="list-group-item"><a class="nav_cop  text-body" aria-expanded="false" data-bs-toggle="collapse" role="button" >Vim</a>
+              <ul class="collapse list-group list-group-flush show">
+                
+
+        
+        
+            <li class="list-group-item"><a class="text-decoration-none  text-muted" href="../vim-plug/">vim-plug</a></li>
+            
+        
+        
+            <li class="list-group-item"><a class="text-decoration-none  text-body" href="./">.vimrc</a></li>
+            
+        
+        
+              </ul>
+            </li>
+        
+            
+            
+        
+        
+            <li class="list-group-item"><a class="nav_cop  text-muted" aria-expanded="false" data-bs-toggle="collapse" role="button" >Tmux</a>
+              <ul class="collapse list-group list-group-flush ">
+                
+
+        
+        
+            <li class="list-group-item"><a class="text-decoration-none  text-muted" href="../../tmux/tmux/">tmux</a></li>
+            
+        
+        
+              </ul>
+            </li>
+        
+            
+            
+        
+        
+          </ul>
+        </li>
+        
+        
+        
+        <li class="list-group-item">
+          <a class="nav_cop  text-muted" aria-expanded="false" data-bs-toggle="collapse" role="button" >Network</a>
+          <ul class="collapse list-group list-group-flush  ">
+            
+
+        
+        
+            <li class="list-group-item"><a class="nav_cop  text-muted" aria-expanded="false" data-bs-toggle="collapse" role="button" >MAC</a>
+              <ul class="collapse list-group list-group-flush ">
+                
+
+        
+        
+            <li class="list-group-item"><a class="text-decoration-none  text-muted" href="../../../Network/MAC/MacAddress/">MAC Address</a></li>
+            
+        
+        
+              </ul>
+            </li>
+        
+            
+            
+        
+        
+          </ul>
+        </li>
+        
+        
+        
+        <li class="list-group-item">
+          <a class="nav_cop  text-muted" aria-expanded="false" data-bs-toggle="collapse" role="button" >Shell</a>
+          <ul class="collapse list-group list-group-flush  ">
+            
+
+        
+        
+            <li class="list-group-item"><a class="text-decoration-none  text-muted" href="../../../Shell/Prompt/">Prompt</a></li>
+            
+        
+        
+          </ul>
+        </li>
+        
+        
+        
+        <li class="list-group-item">
+          <a class="nav_cop  text-muted" aria-expanded="false" data-bs-toggle="collapse" role="button" >VirtualBox</a>
+          <ul class="collapse list-group list-group-flush  ">
+            
+
+        
+        
+            <li class="list-group-item"><a class="text-decoration-none  text-muted" href="../../../VirtualBox/Mouse/">Mouse</a></li>
+            
+        
+        
+          </ul>
+        </li>
+        
+        
+      </ul>
+      </div>
+    </div>
+    
+       
+    
+    
+    
+    <div class="col-12 col-md-2 order-md-3 print-hide">
+      <div class="collapse d-md-block text-nowrap" id="tol"  style="overflow-x:scroll;">
+        <span>目次</span>
+         <hr/>
+        <ul class="list-group list-group-flush">
+        
+        <li class="list-group-item"><a class="text-decoration-none text-muted" href="#vimrc" >.vimrc</a>
+          
+          </li>
+        
+      </ul>
+      </div>
+    </div>
+    
+    
+    <div class="col-12 col-md-8 print-main">
+      
+      <h1>.vimrc</h1>
+      
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">Tech Note</li>
+        
+        
+        
+        
+        <li class="breadcrumb-item active" aria-current="page">Editor</li>
+        
+        
+        
+        <li class="breadcrumb-item active" aria-current="page">Vim</li>
+        
+        
+        
+        
+
+        
+        <li class="breadcrumb-item active" aria-current="page">.vimrc</li>
+        
+        
+        
+
+        
+        
+
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ol>
+    </nav>
+    
+    
+    <div class="d-flex justify-content-between">
+      
+      <div>
+        
+        <a class="btn text-primary print-hide" href="../vim-plug/" title="vim-plug"><i class="bi bi-chevron-left"></i></a>
+        
+        
+        <a class="btn text-primary print-hide" href="../../tmux/tmux/" title="tmux"><i class="bi bi-chevron-right"></i></a>
+        
+      </div>
+      
+      
+      <div>
+        <div>
+          
+          
+          <small><span class='git-page-authors git-authors'></span></small>
+          <span>|</span>
+          
+          
+          
+          
+          
+          <button class="btn print-block" title="このページを印刷" onclick="window.print();"><i class="bi bi-printer"></i></button>
+          <button class="btn print-visible d-none" onclick="print_normal();" title="新しいタブで開く"><i class="bi bi-arrow-up-right-square"></i></button>
+          
+          
+          <a class="btn disabled print-hide"><i class="bi bi-pencil"></i></a>
+          
+          
+          <span class="dropdown print-hide">
+            <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-share"></i></button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><button class="btn dropdown-item" onclick="share_to_twitter('.vimrc | Tech Note','');"><i class="bi bi-twitter"></i>&nbsp;Twitter</button></li>
+              <li><button class="btn dropdown-item" onclick="share_to_facebook();"><i class="bi bi-facebook"></i>&nbsp;Facebook</button></li>
+              <li><button class="btn dropdown-item" onclick="share_to_line();"><i class="bi bi-line"></i>&nbsp;LINE</button></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><button class="btn dropdown-item" onclick="print_view();"><i class="bi bi-file-earmark-text"></i>&nbsp;埋込モードで表示</button></li>
+              <li><button class="btn dropdown-item" id="page-url-copy-btn"><i class="bi bi-clipboard"></i>&nbsp;URLをコピー</button></li>
+            </ul>
+          </span>
+        </div>
+      </div>
+    </div>
+    <hr/>
+    
+    
+      <html><head></head><body><h1 id="vimrc">.vimrc</h1>
+<div class="highlight position-relative"><button class="btn copybtn position-absolute top-0 end-0"><i class="bi bi-clipboard"></i></button><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">set</span> <span class="k">number</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="k">set</span> <span class="nb">backspace</span><span class="p">=</span>indent<span class="p">,</span><span class="nb">eol</span><span class="p">,</span><span class="k">start</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="k">set</span> <span class="nb">whichwrap</span><span class="p">=</span><span class="k">b</span><span class="p">,</span>s<span class="p">,</span><span class="k">h</span><span class="p">,</span><span class="k">l</span><span class="p">,&lt;,&gt;,</span>[<span class="p">,</span>]<span class="p">,~</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="k">set</span> <span class="nb">showcmd</span>
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="k">set</span> <span class="nb">showmatch</span>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="k">set</span> <span class="nb">title</span>
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="k">set</span> <span class="nb">noswapfile</span>
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="k">set</span> <span class="nb">laststatus</span><span class="p">=</span><span class="m">2</span>
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="k">set</span> <span class="nb">statusline</span><span class="p">=</span>%F%<span class="k">m</span>\ %<span class="p">=</span>\ [ENC<span class="p">=</span>%{&amp;<span class="nb">fenc</span><span class="p">!=</span><span class="s1">''</span>?&amp;<span class="nb">fenc</span>:&amp;<span class="nb">enc</span>}]\ [TYPE<span class="p">=</span>%Y]\ [CODE<span class="p">=</span><span class="m">0</span>x%<span class="m">02</span>B]\ [POS<span class="p">=</span>%<span class="k">l</span>/%L<span class="p">(</span>%<span class="m">02</span>v<span class="p">)</span>]
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="k">set</span> <span class="nb">tabstop</span><span class="p">=</span><span class="m">4</span>
+<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="k">set</span> <span class="nb">shiftwidth</span><span class="p">=</span><span class="m">4</span>
+<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="k">set</span> <span class="nb">expandtab</span>
+<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a>
+<a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="c">"set tags+=/usr/src/tags</span>
+<a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a>
+<a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="c">" Highlight Zenkaku Space</span>
+<a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="k">function</span><span class="p">!</span> ZenkakuSpace<span class="p">()</span>
+<a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a>    <span class="nb">highlight</span> ZenkakuSpace cterm<span class="p">=</span>reverse ctermfg<span class="p">=</span>DarkMagenta <span class="k">gui</span><span class="p">=</span>reverse guifg<span class="p">=</span>DarkMagenta
+<a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="k">endfunction</span>
+<a href="#__codelineno-0-23" id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="k">if</span> has<span class="p">(</span><span class="s1">'syntax'</span><span class="p">)</span>
+<a href="#__codelineno-0-24" id="__codelineno-0-24" name="__codelineno-0-24"></a>    augroup ZenkakuSpace
+<a href="#__codelineno-0-25" id="__codelineno-0-25" name="__codelineno-0-25"></a>        autocmd<span class="p">!</span>
+<a href="#__codelineno-0-26" id="__codelineno-0-26" name="__codelineno-0-26"></a>        autocmd <span class="nb">ColorScheme</span> * <span class="k">call</span> ZenkakuSpace<span class="p">()</span>
+<a href="#__codelineno-0-27" id="__codelineno-0-27" name="__codelineno-0-27"></a>        autocmd <span class="nb">VimEnter</span><span class="p">,</span><span class="nb">WinEnter</span> * <span class="k">match</span> ZenkakuSpace <span class="sr">/　/</span>
+<a href="#__codelineno-0-28" id="__codelineno-0-28" name="__codelineno-0-28"></a>    augroup END
+<a href="#__codelineno-0-29" id="__codelineno-0-29" name="__codelineno-0-29"></a>    <span class="k">call</span> ZenkakuSpace<span class="p">()</span>
+<a href="#__codelineno-0-30" id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="k">endif</span>
+<a href="#__codelineno-0-31" id="__codelineno-0-31" name="__codelineno-0-31"></a>
+<a href="#__codelineno-0-32" id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="nb">inoremap</span> { {}<span class="p">&lt;</span>LEFT<span class="p">&gt;</span>
+<a href="#__codelineno-0-33" id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="c">"inoremap [ []&lt;LEFT&gt;</span>
+<a href="#__codelineno-0-34" id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="c">"inoremap ' ''&lt;LEFT&gt;</span>
+<a href="#__codelineno-0-35" id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="c">"inoremap " ""&lt;LEFT&gt;</span>
+<a href="#__codelineno-0-36" id="__codelineno-0-36" name="__codelineno-0-36"></a>
+<a href="#__codelineno-0-37" id="__codelineno-0-37" name="__codelineno-0-37"></a>command W <span class="k">w</span>
+<a href="#__codelineno-0-38" id="__codelineno-0-38" name="__codelineno-0-38"></a>command Q <span class="k">q</span>
+<a href="#__codelineno-0-39" id="__codelineno-0-39" name="__codelineno-0-39"></a>command Wq <span class="k">wq</span>
+<a href="#__codelineno-0-40" id="__codelineno-0-40" name="__codelineno-0-40"></a>
+<a href="#__codelineno-0-41" id="__codelineno-0-41" name="__codelineno-0-41"></a><span class="k">call</span> plug#begin<span class="p">()</span>
+<a href="#__codelineno-0-42" id="__codelineno-0-42" name="__codelineno-0-42"></a>    Plug <span class="s1">'preservim/nerdtree'</span>
+<a href="#__codelineno-0-43" id="__codelineno-0-43" name="__codelineno-0-43"></a>    Plug <span class="s1">'tpope/vim-commentary'</span>
+<a href="#__codelineno-0-44" id="__codelineno-0-44" name="__codelineno-0-44"></a>    Plug <span class="s1">'ctrlpvim/ctrlp.vim'</span>
+<a href="#__codelineno-0-45" id="__codelineno-0-45" name="__codelineno-0-45"></a>    Plug <span class="s1">'simeji/winresizer'</span>
+<a href="#__codelineno-0-46" id="__codelineno-0-46" name="__codelineno-0-46"></a>    Plug <span class="s1">'pechorin/any-jump.vim'</span>
+<a href="#__codelineno-0-47" id="__codelineno-0-47" name="__codelineno-0-47"></a>    Plug <span class="s1">'nathanaelkane/vim-indent-guides'</span>
+<a href="#__codelineno-0-48" id="__codelineno-0-48" name="__codelineno-0-48"></a>    Plug <span class="s1">'tomasiser/vim-code-dark'</span>
+<a href="#__codelineno-0-49" id="__codelineno-0-49" name="__codelineno-0-49"></a><span class="k">call</span> plug#<span class="k">end</span><span class="p">()</span>
+<a href="#__codelineno-0-50" id="__codelineno-0-50" name="__codelineno-0-50"></a>
+<a href="#__codelineno-0-51" id="__codelineno-0-51" name="__codelineno-0-51"></a><span class="nb">nnoremap</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">t</span><span class="p">&gt;</span> :NERDTreeToggle<span class="p">&lt;</span>CR<span class="p">&gt;</span>
+<a href="#__codelineno-0-52" id="__codelineno-0-52" name="__codelineno-0-52"></a>
+<a href="#__codelineno-0-53" id="__codelineno-0-53" name="__codelineno-0-53"></a>nmap <span class="p">&lt;</span>C<span class="p">-</span><span class="k">k</span><span class="p">&gt;</span> gcc
+<a href="#__codelineno-0-54" id="__codelineno-0-54" name="__codelineno-0-54"></a>vmap <span class="p">&lt;</span>C<span class="p">-</span><span class="k">k</span><span class="p">&gt;</span> gc
+<a href="#__codelineno-0-55" id="__codelineno-0-55" name="__codelineno-0-55"></a>imap <span class="p">&lt;</span>C<span class="p">-</span><span class="k">k</span><span class="p">&gt;</span> <span class="p">&lt;</span>Esc<span class="p">&gt;</span>VgccA
+<a href="#__codelineno-0-56" id="__codelineno-0-56" name="__codelineno-0-56"></a>
+<a href="#__codelineno-0-57" id="__codelineno-0-57" name="__codelineno-0-57"></a><span class="k">let</span> <span class="k">g</span>:indent_guides_enable_on_vim_startup<span class="p">=</span><span class="m">1</span>
+<a href="#__codelineno-0-58" id="__codelineno-0-58" name="__codelineno-0-58"></a><span class="k">let</span> <span class="k">g</span>:indent_guides_auto_colors<span class="p">=</span><span class="m">0</span>
+<a href="#__codelineno-0-59" id="__codelineno-0-59" name="__codelineno-0-59"></a>autocmd <span class="nb">VimEnter</span><span class="p">,</span>Colorscheme * :<span class="k">hi</span> IndentGuidesOdd ctermbg<span class="p">=</span><span class="m">235</span>
+<a href="#__codelineno-0-60" id="__codelineno-0-60" name="__codelineno-0-60"></a>autocmd <span class="nb">VimEnter</span><span class="p">,</span>Colorscheme * :<span class="k">hi</span> IndentGuidesEven ctermbg<span class="p">=</span><span class="m">235</span>
+<a href="#__codelineno-0-61" id="__codelineno-0-61" name="__codelineno-0-61"></a><span class="k">let</span> <span class="k">g</span>:indent_guides_guide_size<span class="p">=</span><span class="m">1</span>
+<a href="#__codelineno-0-62" id="__codelineno-0-62" name="__codelineno-0-62"></a><span class="k">let</span> <span class="k">g</span>:indent_guides_start_level<span class="p">=</span><span class="m">1</span>
+<a href="#__codelineno-0-63" id="__codelineno-0-63" name="__codelineno-0-63"></a>
+<a href="#__codelineno-0-64" id="__codelineno-0-64" name="__codelineno-0-64"></a><span class="nb">syntax</span> enable
+<a href="#__codelineno-0-65" id="__codelineno-0-65" name="__codelineno-0-65"></a><span class="k">colorscheme</span> codedark
+</code></pre></div></body></html><html><head><script>$('.copybtn').click(function (){
+    const selection = window.getSelection();
+    const code = this.parentNode;
+    selection.selectAllChildren(code.children[code.children.length-1]);
+    document.execCommand('copy');
+    this.querySelector('.bi-clipboard').classList.add('text-success');
+    this.querySelector('.bi-clipboard').classList.replace('bi-clipboard','bi-clipboard-check');
+});</script></head><body></body></html>
+    
+    
+
+      </div>
+      </div>
+      <script src="../../../js/theme.js"></script>
+      
+      
+      
+    <script async src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    <script async src="../../../search/main.js"></script>
+      
+      
+    </main>
+  </div>
+  
+  
+  
+  
+  
+  <footer class="border-top footer text-muted .position-absolute.bottom-0.start-50.translate-middle-x" style="padding-top:15px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md">
+          
+          <p>Copyright &copy; 2024 oscar5201m. All Rights Reserved.</p>
+          
+        </div>
+        
+      </div>
+    </div>
+  </footer>
+  
+  
+
+<div class="modal fade" id="searchModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="searchModal" aria-hidden="true">
+  <div class="modal-dialog modal-lg print-hide">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="searchModalLabel">検索</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
+      </div>
+      <div class="modal-body">
+        <div class="input-group mb-3">
+          <input id="mkdocs-search-query" type="text" class="form-control" aria-label="検索" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div id="mkdocs-search-results">
+          キーワードを入力して検索を始めましょう
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

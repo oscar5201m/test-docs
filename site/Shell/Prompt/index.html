@@ -109,6 +109,56 @@
         
         
         <li class="list-group-item">
+          <a class="nav_cop  text-muted" aria-expanded="false" data-bs-toggle="collapse" role="button" >Editor</a>
+          <ul class="collapse list-group list-group-flush  ">
+            
+
+        
+        
+            <li class="list-group-item"><a class="nav_cop  text-muted" aria-expanded="false" data-bs-toggle="collapse" role="button" >Vim</a>
+              <ul class="collapse list-group list-group-flush ">
+                
+
+        
+        
+            <li class="list-group-item"><a class="text-decoration-none  text-muted" href="../../Editor/Vim/vim-plug/">vim-plug</a></li>
+            
+        
+        
+            <li class="list-group-item"><a class="text-decoration-none  text-muted" href="../../Editor/Vim/vimrc/">.vimrc</a></li>
+            
+        
+        
+              </ul>
+            </li>
+        
+            
+            
+        
+        
+            <li class="list-group-item"><a class="nav_cop  text-muted" aria-expanded="false" data-bs-toggle="collapse" role="button" >Tmux</a>
+              <ul class="collapse list-group list-group-flush ">
+                
+
+        
+        
+            <li class="list-group-item"><a class="text-decoration-none  text-muted" href="../../Editor/tmux/tmux/">tmux</a></li>
+            
+        
+        
+              </ul>
+            </li>
+        
+            
+            
+        
+        
+          </ul>
+        </li>
+        
+        
+        
+        <li class="list-group-item">
           <a class="nav_cop  text-muted" aria-expanded="false" data-bs-toggle="collapse" role="button" >Network</a>
           <ul class="collapse list-group list-group-flush  ">
             
@@ -272,6 +322,8 @@
         
         
         
+        
+        
         <li class="breadcrumb-item active" aria-current="page">Shell</li>
         
         
@@ -355,16 +407,16 @@
 <p>指定形式は、<code>\033[スタイル;色m</code></p>
 </li>
 <li>
-<p><code>\033[</code>の部分は、<code>\e[</code>と書いても良い</p>
+<p>ただし、<code>\033[</code>の部分は<code>\e[</code>と書いても良い → <code>\e[スタイル;色m</code></p>
 </li>
 <li>
-<p><code>\[\033[01;32m\]</code>は、太字の緑</p>
+<p><code>\033[01;32m</code>は、太字の緑</p>
 </li>
 <li>
-<p><code>\[\033[00m\]</code>は、スタイルと色のリセット</p>
+<p><code>\033[00m</code>は、スタイルと色のリセット</p>
 </li>
 <li>
-<p><code>\[\033[01;32m\]</code>は、太字の青</p>
+<p><code>\033[01;32m</code>は、太字の青</p>
 </li>
 </ul>
 <h3 id="u"><code>\u</code></h3>
